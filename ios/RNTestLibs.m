@@ -27,9 +27,10 @@ RCT_REMAP_METHOD(getEvent,
                  findEventsWithResolver:(RCTPromiseResolveBlock)resolve
                  rejecter:(RCTPromiseRejectBlock)reject)
 {
-RCTLogInfo(@"Get event";
- NSString *thingToReturn = @"Hello World!";
- resolve(thingToReturn);
+      NSString *events = @"event 1";
+      resolve(events);
+      NSError *error = @"error geen event"
+      reject(error);
 }
 
 
