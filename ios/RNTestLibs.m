@@ -19,7 +19,7 @@ RCT_EXPORT_METHOD(findName:(RCTResponseSenderBlock)callback)
   NSString *name = @"Mahesh";
   callback(@[[NSNull null], name]);
 }
-RCT_REMAP_METHOD(findName,
+RCT_EXPORT_METHOD(findEvents:
                  findEventsWithResolver:(RCTPromiseResolveBlock)resolve
                  rejecter:(RCTPromiseRejectBlock)reject)
 {
