@@ -19,17 +19,12 @@ RCT_EXPORT_METHOD(findName:(RCTResponseSenderBlock)callback)
   NSString *name = @"Mahesh";
   callback(@[[NSNull null], name]);
 }
-RCT_REMAP_METHOD(findName,
+RCT_REMAP_METHOD(getEvent,
                  findEventsWithResolver:(RCTPromiseResolveBlock)resolve
                  rejecter:(RCTPromiseRejectBlock)reject)
 {
-  NSString *events = @"event1"
-  if (events) {
-    resolve(events);
-  } else {
-    NSError *error = @"no event"
-    reject(@"no_events", @"There were no events", error);
-  }
+ NSString *thingToReturn = @"Hello World!";
+ resolve(thingToReturn);
 }
 
 
