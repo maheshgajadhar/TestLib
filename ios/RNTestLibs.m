@@ -29,7 +29,7 @@ RCT_REMAP_METHOD(getEvent,
 {
       NSString *events = @"event 1";
       resolve(events);
-      NSError *error = @"error geen event"
+      NSString *error = @"error geen event"
       reject(error);
 }
 
