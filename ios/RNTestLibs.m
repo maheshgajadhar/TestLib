@@ -14,10 +14,6 @@ RCT_EXPORT_METHOD(addEvent:(NSString *)name location:(NSString *)location)
 {
   RCTLogInfo(@"Pretending to create an event %@ at %@", name, location);
 }
-RCT_EXPORT_METHOD(addEvent2:(NSString *)name location:(NSString *)location)
-{
-  RCTLogInfo(@"Pretending to create an event %@ at %@", name, location);
-}
 RCT_EXPORT_METHOD(findName:(RCTResponseSenderBlock)callback)
 {
   NSString *name = @"Mahesh";
