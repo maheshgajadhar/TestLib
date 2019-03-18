@@ -23,14 +23,9 @@ RCT_EXPORT_METHOD(getEvent:(RCTResponseSenderBlock)callback)
   NSString *name = @"Mahesh";
   callback(@[[NSNull null], name]);
 }
-RCT_REMAP_METHOD(getEvent2:
-                 findEventsWithResolver:(RCTPromiseResolveBlock)resolve
-                 rejecter:(RCTPromiseRejectBlock)reject)
+RCT_EXPORT_METHOD(addEvent3:(NSString *)name location:(NSString *)location)
 {
-      NSString *events = @"event 1";
-      resolve(events);
-      NSString *error = @"error geen event";
-      reject(error);
+  RCTLogInfo(@"Pretending to create an event %@ at %@", name, location);
 }
 
 
