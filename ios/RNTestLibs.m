@@ -18,5 +18,17 @@ RCT_EXPORT_METHOD(addEvent2:(NSString *)name location:(NSString *)location)
 {
   RCTLogInfo(@"Pretending to create an event %@ at %@", name, location);
 }
+RCT_REMAP_METHOD(getEvent,
+resolver:(RCTPromiseResolveBlock)resolve
+rejecter:(RCTRejectBlock)reject)
+{
+  NSString *event = @"etentje at den haag";
+  if(event){
+    resolve(event);
+  } else{
+    NSString *error = @"Geen event";
+    reject(error);
+  }
+}
 
 @end
