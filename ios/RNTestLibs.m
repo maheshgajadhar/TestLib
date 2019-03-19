@@ -26,18 +26,5 @@ RCT_EXPORT_METHOD(testFunction:(NSString *)name location:(NSString *)location)
 {
   RCTLogInfo(@"Pretending to create an event %@ at %@", name, location);
 }
-RCT_EXPORT_METHOD(getEvent:
-resolver:(RCTPromiseResolveBlock)resolve
-rejecter:(RCTPromiseRejectBlock)reject)
-{
-  NSString *event = @"Diner at Den Haag";
-  if(event){
-    resolve(event);
-  } else {
-    NSError *error= [NSError errorWithDomain:@"world" code:status.statusCode userInfo:nil];
-    NSString *errorString = @"No event found";
-    reject(errorString, errorString, error);
-  }
-}
 
 @end
