@@ -34,8 +34,9 @@ rejecter:(RCTPromiseRejectBlock)reject)
   if(event){
     resolve(event);
   } else {
-    NSString *error = @"No event found";
-    reject(error);
+    NSError *error= [NSError errorWithDomain:@"world" code:status.statusCode userInfo:nil];
+    NSString *errorString = @"No event found";
+    reject(errorString, errorString, error);
   }
 }
 
