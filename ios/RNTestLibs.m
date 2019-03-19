@@ -22,6 +22,10 @@ RCT_EXPORT_METHOD(addEvent3:(NSString *)name location:(NSString *)location)
 {
   RCTLogInfo(@"Pretending to create an event %@ at %@", name, location);
 }
+RCT_EXPORT_METHOD(addEvent4:(NSString *)name location:(NSString *)location)
+{
+  RCTLogInfo(@"Pretending to create an event %@ at %@", name, location);
+}
 RCT_EXPORT_METHOD(getEvent:
 resolver:(RCTPromiseResolveBlock)resolve
 rejecter:(RCTPromiseRejectBlock)reject)
